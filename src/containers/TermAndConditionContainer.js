@@ -17,8 +17,7 @@ export class TermAndConditionContainer extends React.Component {
 	}
 
 	render() {
-		const termAndCondition = this.state.showTermAndCondition &&
+		return this.state.showTermAndCondition &&
 			<TermAndCondition handleCloseTermAndCondition={this.handleCloseTermAndCondition}/>;
-		return termAndCondition;
 	}
 }

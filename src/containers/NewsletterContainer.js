@@ -17,7 +17,6 @@ export class NewsletterContainer extends React.Component {
 	}
 
 	render() {
-		const newsletter = this.state.showNewsletter && <Newsletter handleCloseNewsletter={this.handleCloseNewsletter} />;
-		return newsletter;
+		return this.state.showNewsletter && <Newsletter handleCloseNewsletter={this.handleCloseNewsletter} />;
 	}
 }
