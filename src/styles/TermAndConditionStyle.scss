@@ -2,7 +2,27 @@
 
 .Privacy-policy {
   .Row {
-    padding: 20px 0;
+    .Privacy-policy-text {
+      a {
+        text-decoration: none;
+      }
+
+      margin-bottom: 10px;
+    }
+
+    .Privacy-policy-button {
+      button {
+        padding: 12px 20px;
+        background: $Blue;
+        border: 1px solid $Blue;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 3px;
+        color: #ffffff;
+      }
+    }
+
+    padding: 20px;
   }
 }
 
@@ -15,22 +35,16 @@
 
       .Privacy-policy-text {
         width: 85%;
+        margin-bottom: none;
       }
 
       .Privacy-policy-button {
-        button {
-          padding: 12px 20px;
-          background: $Blue;
-          border: 1px solid $Blue;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          border-radius: 3px;
-          color: #ffffff;
-        }
-
         width: 15%;
         text-align: right;
       }
+
+      padding: 20px 0;
+      width: 720px;
     }
   }
 }
