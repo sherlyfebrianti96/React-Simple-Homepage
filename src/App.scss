@@ -10,6 +10,7 @@
   min-width: 100%;
   width: 100%;
   background: $Smoke-grey;
+  color: #454545;
 }
 
 .Clearfix {
@@ -33,10 +34,10 @@ h1, h2, p {
   padding-bottom: 10px
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
   .Container {
     .Content {
-      width: 780px;
+      width: 720px;
     }
   }
 }
