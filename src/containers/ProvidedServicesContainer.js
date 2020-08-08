@@ -1,6 +1,5 @@
 import React from 'react';
 import {ProvidedServices} from './../components/ProvidedServices';
-import './../styles/ProvidedServices.scss';
 
 export class ProvidedServicesContainer extends React.Component {
 	constructor(props) {
