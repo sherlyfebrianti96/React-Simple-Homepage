@@ -1,5 +1,5 @@
 import React from 'react';
-import {TermAndCondition} from './../components/TermAndCondition';
+import {ProvidedServices} from './../components/ProvidedServices';
 import './../styles/ProvidedServices.scss';
 
 export class ProvidedServicesContainer extends React.Component {
@@ -34,17 +34,7 @@ export class ProvidedServicesContainer extends React.Component {
 
 	render() {
 		return (
-			<div className="Provided-services">
-				<div className="Content">
-					<div className="Row Highlight">
-						<h1>How Can I Help You?</h1>
-						<p>Our work then targeted, best practices outcomes social innovation synergy.</p>
-						<p>Venture philanthropy, revolutionary inclusive policymaker relief. User-centered program areas scale.</p>
-					</div>
-				</div>
-				{this.getServices(this.props.services)}
-				<div className="Clearfix"></div>
-			</div>
+			<ProvidedServices getServices={this.getServices(this.props.services)} />
 		);
 	}
 }
