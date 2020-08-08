@@ -1,5 +1,5 @@
 import React from 'react';
-import './../styles/FooterStyle.scss';
+import {Footer} from './../components/Footer';
 
 export class FooterContainer extends React.Component {
 	constructor(props) {
@@ -8,11 +8,7 @@ export class FooterContainer extends React.Component {
 
 	render() {
 		return (
-			<div className="Footer">
-				<div className="Content">
-					<p>&copy;2020 Yuan Monos. All rights reserved.</p>
-				</div>
-			</div>
+			<Footer greetName={this.props.greetName}/>
 		);
 	}
 }

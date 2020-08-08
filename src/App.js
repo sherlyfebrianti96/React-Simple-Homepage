@@ -7,12 +7,14 @@ import {ProvidedServicesContainer} from "./containers/ProvidedServicesContainer"
 import {FooterContainer} from "./containers/FooterContainer";
 
 function App() {
+  const greetName = 'Sherly Febrianti';
+
   return (
     <div className="Container">
       <TermAndConditionContainer />
-      <HeaderContainer />
+      <HeaderContainer greetName={greetName} />
       <ProvidedServicesContainer/>
-      <FooterContainer/>
+      <FooterContainer greetName={greetName}/>
     </div>
   );
 }
