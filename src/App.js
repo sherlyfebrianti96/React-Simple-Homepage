@@ -4,6 +4,7 @@ import './App.scss';
 import {TermAndConditionContainer} from './containers/TermAndConditionContainer';
 import {HeaderContainer} from './containers/HeaderContainer';
 import {ProvidedServicesContainer} from "./containers/ProvidedServicesContainer";
+import {FooterContainer} from "./containers/FooterContainer";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <TermAndConditionContainer />
       <HeaderContainer />
       <ProvidedServicesContainer/>
-
+      <FooterContainer/>
     </div>
   );
 }
