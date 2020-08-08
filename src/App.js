@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import {TermAndConditionContainer} from './containers/TermAndConditionContainer';
 import {HeaderContainer} from './containers/HeaderContainer';
-import {ProvidedServicesContainer} from "./containers/ProvidedServicesContainer";
+import {ProvidedServicesContainer} from './containers/ProvidedServicesContainer';
 import {FooterContainer} from "./containers/FooterContainer";
+import {NewsletterContainer} from './containers/NewsletterContainer'
 
 function App() {
   const greetName = 'Sherly Febrianti';
@@ -15,6 +15,7 @@ function App() {
       <HeaderContainer greetName={greetName} />
       <ProvidedServicesContainer/>
       <FooterContainer greetName={greetName}/>
+      <NewsletterContainer />
     </div>
   );
 }
