@@ -1,0 +1,103 @@
+@import "StyleVariables";
+
+.Header {
+  &:before {
+    position: absolute;
+    width: 100%;
+    min-height: 500px;
+    background: $Dark-blue;
+    content: '';
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  & > div {
+    z-index: 999;
+    position: relative;
+  }
+
+  .Logo {
+    img {
+      width: 40px;
+      margin: 20px;
+    }
+  }
+
+  .Greets {
+    h1 {
+      font-weight: normal;
+    }
+
+    h1, h2, p {
+      padding-bottom: 10px
+    }
+
+    p {
+      span {
+        display: block;
+      }
+    }
+
+    button {
+      &:hover {
+        cursor: pointer;
+        background: #ffffff;
+        color: $Dark-blue;
+      }
+
+      text-transform: uppercase;
+      padding: 10px 20px;
+      margin: 20px 0;
+      border: 2px solid #ffffff;
+      background: none;
+      color: #ffffff;
+      border-radius: 3px;
+      font-weight: bolder;
+    }
+
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 0;
+  }
+
+  background-image: url('./../assets/work-desk__dustin-lee.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  position: relative;
+}
+
+@media screen and (min-width: 780px) {
+  .Header {
+    &:before {
+      min-height: 600px;
+    }
+
+    .Logo {
+      img {
+        width: 40px;
+        margin: 10px 20px;
+      }
+    }
+
+    .Greets {
+      p {
+        span {
+          &:not(:first-child) {
+            margin-left: 5px;
+          }
+
+          width: auto;
+          display: unset;
+        }
+      }
+
+      padding: 120px 0;
+    }
+
+    background-size: 100% 100%;
+    min-height: 600px;
+  }
+}
