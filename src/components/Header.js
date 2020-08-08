@@ -1,24 +1,22 @@
 import React from 'react';
 import './../styles/HeaderStyle.scss';
 
-export class Header extends React.Component {
-  render() {
-    return (
-      <div className="Header">
-        <div className="Logo">
-          <img src={require('./../assets/y-logo-white.png')} />
-        </div>
-        <div className="Greets">
-          <h1>Hello! I'm {this.props.greetName}</h1>
-          <h2>Consult, Design, and Develop Websites</h2>
-          <p>
-            <span>Have something great in mind?</span>
-            <span>Feel free to contact me.</span>
-          </p>
-          <p>I'll help you to make it happen.</p>
-          <button>Let's Make Contact</button>
-        </div>
-      </div>
-    );
-  }
+export const Header = (props) => {
+	return (
+		<div className="Header">
+			<div className="Logo">
+				<img src={require('./../assets/y-logo-white.png')}/>
+			</div>
+			<div className="Greets">
+				<h1>Hello! I'm {props.greetName}</h1>
+				<h2>Consult, Design, and Develop Websites</h2>
+				<p>
+					<span>Have something great in mind?</span>
+					<span>Feel free to contact me.</span>
+				</p>
+				<p>I'll help you to make it happen.</p>
+				<button>Let's Make Contact</button>
+			</div>
+		</div>
+	);
 }
