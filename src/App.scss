@@ -1,3 +1,26 @@
+.Container {
+  .Content {
+    width: 100%;
+    margin: auto;
+  }
+
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
+.Clearfix {
+  clear: both;
+}
+
+@media screen and (min-width: 780px) {
+  .Container {
+    .Content {
+      width: 780px;
+    }
+  }
+}
+
 .App {
   text-align: center;
 }

@@ -1,0 +1,36 @@
+@import "StyleVariables";
+
+.Privacy-policy {
+  .Row {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .Privacy-policy {
+    .Row {
+      .Privacy-policy-text, .Privacy-policy-button {
+        float: left;
+      }
+
+      .Privacy-policy-text {
+        width: 85%;
+      }
+
+      .Privacy-policy-button {
+        button {
+          padding: 12px 20px;
+          background: $Blue;
+          border: 1px solid $Blue;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 3px;
+          color: #ffffff;
+        }
+
+        width: 15%;
+        text-align: right;
+      }
+    }
+  }
+}
