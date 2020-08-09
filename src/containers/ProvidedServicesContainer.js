@@ -27,13 +27,9 @@ export class ProvidedServicesContainer extends React.Component {
 
 	getServices(services) {
 		let servicesElement = [];
-		for (let i = 0; i < (services.length / 3); i++) {
+		for (let i = 0; i < services.length; i++) {
 			servicesElement.push(
-				<div className="Services" key={'services-' + i}>
-					{this.getService(services[i + (i * (i + 1))], ('service-' + (i + (i * (i + 1)))))}
-					{this.getService(services[i + (i * (i + 1)) + 1], ('service-' + (i + (i * (i + 1)) + 1)))}
-					{this.getService(services[i + (i * (i + 1)) + 2], ('service-' + (i + (i * (i + 1)) + 2)))}
-				</div>
+					this.getService(services[i], ('service-' + i))
 			);
 		}
 

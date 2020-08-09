@@ -12,7 +12,9 @@ export const ProvidedServices = (props) => {
 					<p>Venture philanthropy, revolutionary inclusive policymaker relief. User-centered program areas scale.</p>
 				</div>
 			</div>
-			{props.getServices}
+			<div className="Services">
+				{props.getServices}
+			</div>
 			<div className="Clearfix"></div>
 		</div>
 	);
