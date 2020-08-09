@@ -1,99 +1,108 @@
 @import "StyleVariables";
 
-.Newsletter {
-  &:after {
-    background-color: $Blue;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.9;
-  }
-
-  * {
-    position: relative;
-    z-index: 2;
-  }
-
-  .Newsletter-form {
-    .Input {
-      input {
-        width: calc(100% - 12px);
-        padding: 4px;
-      }
-
-      width: 100%;
+.Newsletter-wrapper {
+  .Newsletter {
+    &:after {
+      background-color: $Blue;
+      position: absolute;
+      bottom: 0;
       left: 0;
-      margin-bottom: 10px;
+      content: '';
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.9;
     }
 
-    .Button {
-      button {
-        &:hover {
-          background: $Dark-orange;
+    * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .Newsletter-form {
+      .Input {
+        input {
+          width: calc(100% - 12px);
+          padding: 4px;
         }
 
-        padding: 5px 0;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        border: 1px solid $Dark-orange;
-        background: $Orange;
-        color: #ffffff;
-        font-weight: bolder;
         width: 100%;
-        cursor: pointer;
-      }
-
-      right: 0;
-      width: 100%;
-    }
-
-    position: relative;
-    min-height: 30px;
-  }
-
-  .Newsletter-close {
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  color: #ffffff;
-  width: calc(100% - 40px);
-  padding: 35px 20px 20px;
-  z-index: 999;
-}
-
-@media screen and (min-width: 768px) {
-  .Newsletter {
-    .Newsletter-form {
-      .Input, .Button {
-        position: absolute;
-      }
-
-      .Input {
-        width: 460px;
         left: 0;
-        margin-bottom: 0;
+        margin-bottom: 10px;
       }
 
       .Button {
+        button {
+          &:hover {
+            background: $Dark-orange;
+          }
+
+          padding: 5px 0;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          border: 1px solid $Dark-orange;
+          background: $Orange;
+          color: #ffffff;
+          font-weight: bolder;
+          width: 100%;
+          cursor: pointer;
+        }
+
         right: 0;
-        width: 120px;
+        width: 100%;
       }
 
       position: relative;
       min-height: 30px;
     }
-    width: 600px;
+
+    .Newsletter-close {
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+    width: calc(100% - 40px);
+    padding: 35px 20px 20px;
+    z-index: 999;
+  }
+
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .Newsletter-wrapper {
+    .Newsletter {
+      .Newsletter-form {
+        .Input, .Button {
+          position: absolute;
+        }
+
+        .Input {
+          width: 460px;
+          left: 0;
+          margin-bottom: 0;
+        }
+
+        .Button {
+          right: 0;
+          width: 120px;
+        }
+
+        position: relative;
+        min-height: 30px;
+      }
+
+      width: 600px;
+    }
   }
 }
