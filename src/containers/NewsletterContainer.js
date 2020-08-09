@@ -1,7 +1,17 @@
 import React from 'react';
 import {Newsletter} from './../components/Newsletter';
 
+const pendingNewsletterCookieString = 'pendingNewsletter=true';
+
 export class NewsletterContainer extends React.Component {
+	componentWillMount() {
+		if (document.cookie === pendingNewsletterCookieString) {
+			this.setState({
+				showNewsletter: false
+			});
+		}
+	}
+
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -14,7 +24,6 @@ export class NewsletterContainer extends React.Component {
 	}
 
 	handleCloseNewsletter() {
-		console.log('close clicked');
 		this.setState({
 			closePanelClicked: true
 		});
@@ -22,9 +31,9 @@ export class NewsletterContainer extends React.Component {
 			this.setState({
 				showNewsletter: false
 			});
+			this.setVisitedCookie();
 		}, 5000);
 	}
-
 
 	getWrapperClass() {
 		let wrapperClass = 'Newsletter-wrapper';
@@ -34,6 +43,10 @@ export class NewsletterContainer extends React.Component {
 
 		return wrapperClass;
 	}
+
+	setVisitedCookie = () => {
+		document.cookie = pendingNewsletterCookieString + '; max-age=' + (10 * 60);
+	};
 
 	render() {
 		return this.state.showNewsletter &&
