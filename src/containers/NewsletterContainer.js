@@ -4,23 +4,23 @@ import {Newsletter} from './../components/Newsletter';
 const pendingNewsletterCookieString = 'pendingNewsletter=true';
 
 export class NewsletterContainer extends React.Component {
+	componentWillMount() {
+		if (document.cookie === pendingNewsletterCookieString) {
+			this.setState({
+				showNewsletter: false
+			});
+		}
+	}
+
 	constructor(props) {
 		super(props);
 		this.state = {
-			showNewsletter: false,
+			showNewsletter: true,
 			position: 0,
 			closePanelClicked: false
 		};
 		this.handleCloseNewsletter = this.handleCloseNewsletter.bind(this);
 		this.getWrapperClass = this.getWrapperClass.bind(this);
-	}
-
-	componentDidMount() {
-	if (document.cookie !== pendingNewsletterCookieString) {
-			this.setState({
-				showNewsletter: true
-			});
-		}
 	}
 
 	handleCloseNewsletter() {
